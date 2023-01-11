@@ -6,7 +6,7 @@ public class IFellowTaskTest {
 
     @Test
     public void test1() {
-        assertEquals("8 - \"(()(()(((())))))\"", IFellowTaskMain.getAnswer("))(()(()(((()))))))"));
+        assertEquals("16 - (()(()(((())))))", IFellowTaskMain.getAnswer("))(()(()(((()))))))"));
     }
 
     @Test
@@ -16,12 +16,12 @@ public class IFellowTaskTest {
 
     @Test
     public void test3() {
-        assertEquals("2 - \"()()\"", IFellowTaskMain.getAnswer(")()())"));
+        assertEquals("4 - ()()", IFellowTaskMain.getAnswer(")()())"));
     }
 
     @Test
     public void test4() {
-        assertEquals("3 - \"(()())\"", IFellowTaskMain.getAnswer(")(()())"));
+        assertEquals("6 - (()())", IFellowTaskMain.getAnswer(")(()())"));
     }
 
     @Test
@@ -31,16 +31,21 @@ public class IFellowTaskTest {
 
     @Test
     public void test6() {
-        assertEquals("2 - \"()()\"", IFellowTaskMain.getAnswer(")(()()"));
+        assertEquals("4 - ()()", IFellowTaskMain.getAnswer(")(()()"));
     }
 
     @Test
     public void test7() {
-        assertEquals("2 - \"()()\"", IFellowTaskMain.getAnswer("(()((()(((("));
+        assertEquals("4 - ()()", IFellowTaskMain.getAnswer("(()((()(((("));
     }
 
     @Test
     public void test8() {
-        assertEquals("6 - \"(())()()(())\"", IFellowTaskMain.getAnswer(")(())(((()()(())"));
+        assertEquals("12 - (())()()(())", IFellowTaskMain.getAnswer(")(())(((()()(())"));
+    }
+
+    @Test
+    public void test9() {
+        assertEquals("10 - ()(()())()", IFellowTaskMain.getAnswer("())(()())(()"));
     }
 }

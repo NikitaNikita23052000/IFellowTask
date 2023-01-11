@@ -41,13 +41,14 @@ public class IFellowTaskMain {
 
     public static String getAnswer(String str) {
         String validBrackets = validBrackets(str);
-        int countBrackets = StringUtils.countMatches(validBrackets, "(");
+        int countBrackets = validBrackets.length();
         if (countBrackets == 0) {
             return "0";
         }
-        return String.format("%s - \"%s\"", countBrackets, validBrackets);
+        return String.format("%s - %s", countBrackets, validBrackets);
     }
 
     public static void main(String[] args) {
+        System.out.println(getAnswer("())(()())(()"));
     }
 }
